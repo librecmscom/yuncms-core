@@ -42,19 +42,17 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
             ],
             'components' => [
                 'i18n' => [
-                    [
-                        'translations' => [
-                            'core*' => [
-                                'class' => 'yii\i18n\PhpMessageSource',
-                                //'basePath' => '@app/messages',
+                    'translations' => [
+                        'core*' => [
+                            'class' => 'yii\i18n\PhpMessageSource',
+                            //'basePath' => '@app/messages',
+                            'sourceLanguage' => 'en-US',
+                            'fileMap' => [
+                                'class' => 'yii\\i18n\\PhpMessageSource',
                                 'sourceLanguage' => 'en-US',
-                                'fileMap' => [
-                                    'class' => 'yii\\i18n\\PhpMessageSource',
-                                    'sourceLanguage' => 'en-US',
-                                    'basePath' => '@yuncms/core/messages',
-                                ],
+                                'basePath' => '@yuncms/core/messages',
                             ],
-                        ]
+                        ],
                     ]
                 ]
             ],
@@ -79,19 +77,17 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
                     'scriptUrl' => '/index.php',
                 ],
                 'i18n' => [
-                    [
-                        'translations' => [
-                            'core*' => [
-                                'class' => 'yii\i18n\PhpMessageSource',
-                                //'basePath' => '@app/messages',
+                    'translations' => [
+                        'core*' => [
+                            'class' => 'yii\i18n\PhpMessageSource',
+                            //'basePath' => '@app/messages',
+                            'sourceLanguage' => 'en-US',
+                            'fileMap' => [
+                                'class' => 'yii\\i18n\\PhpMessageSource',
                                 'sourceLanguage' => 'en-US',
-                                'fileMap' => [
-                                    'class' => 'yii\\i18n\\PhpMessageSource',
-                                    'sourceLanguage' => 'en-US',
-                                    'basePath' => '@yuncms/core/messages',
-                                ],
+                                'basePath' => '@yuncms/core/messages',
                             ],
-                        ]
+                        ],
                     ]
                 ],
             ]
