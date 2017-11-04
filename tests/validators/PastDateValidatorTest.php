@@ -25,9 +25,9 @@ class PastDateValidatorTest extends TestCase
     public function testPastDateValidator()
     {
         $validator = new PastDateValidator();
-        $this->assertTrue($validator->validate(strtotime("1920-10-21 16:00:10")));
-        $this->assertTrue($validator->validate(strtotime("1970-10-21 16:00:10")));
-        $this->assertTrue($validator->validate(strtotime("2009-10-21 16:00:10")));
-        $this->assertFalse($validator->validate(strtotime("2099-10-21 16:00:10")));
+        $this->assertTrue($validator->validate("1920-10-21 16:00:10"));
+        $this->assertTrue($validator->validate("1970-10-21 16:00:10"));
+        $this->assertTrue($validator->validate("2009-10-21 16:00:10"));
+        $this->assertFalse($validator->validate("2099-10-21 16:00:10"));
     }
 }
