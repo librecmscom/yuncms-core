@@ -7,7 +7,14 @@
 
 namespace yuncms\core\validators;
 
-class PastDateValidator extends DbDateValidator
+use Yii;
+use yii\validators\DateValidator;
+
+/**
+ * Class PastDateValidator
+ * @package yuncms\core\validators
+ */
+class PastDateValidator extends DateValidator
 {
     /**
      * @inheritdoc
@@ -15,7 +22,7 @@ class PastDateValidator extends DbDateValidator
     public function init()
     {
         parent::init();
-        $this->message = Yii::t('base', 'The date has to be in the past.');
+        $this->message = Yii::t('core', 'The date has to be in the past.');
     }
 
     /**
