@@ -13,13 +13,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require --prefer-dist yuncms/yii2-core
+composer require --prefer-dist yuncms/yuncms-core
 ```
 
 or add
 
 ```json
-"yuncms/yii2-core": "~2.0.0"
+"yuncms/yuncms-core": "~2.0.0"
 ```
 
 to the `require` section of your composer.json.
@@ -28,16 +28,7 @@ to the `require` section of your composer.json.
 
 Add following lines to your main configuration file:
 
-```php
-'bootstrap' => [
-    'yuncms\core\Bootstrap',
-],
-'modules' => [
-    'core' => [
-        'class' => 'yuncms\core\Module'   
-    ],
-],
-```
+
 
 ## Updating database schema
 
