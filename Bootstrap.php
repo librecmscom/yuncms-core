@@ -26,11 +26,11 @@ class Bootstrap implements BootstrapInterface
             $app->controllerMap['corn'] = [
                 'class' => 'yuncms\core\console\controllers\CronController',
             ];
-            $app->controllerMap['migrate'] = [
-                'class' => 'yii\console\controllers\MigrateController',
-                'templateFile' => '@yuncms/core/console/views/migration.php',
-                //'migrationNamespaces' => $migrationNamespaces,
-            ];
+//            $app->controllerMap['migrate'] = [
+//                'class' => 'yii\console\controllers\MigrateController',
+//                'templateFile' => '@yuncms/core/console/views/migration.php',
+//                //'migrationNamespaces' => $migrationNamespaces,
+//            ];
         }
 
         //全局事件处理程序注册
