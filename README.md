@@ -1,11 +1,10 @@
 # Core Extension for YUNCMS
 
 
-[![Latest Stable Version](https://poser.pugx.org/yuncms/yii2-core/v/stable.png)](https://packagist.org/packages/yuncms/yii2-core)
-[![Total Downloads](https://poser.pugx.org/yuncms/yii2-core/downloads.png)](https://packagist.org/packages/yuncms/yii2-core)
-[![Reference Status](https://www.versioneye.com/php/yuncms:yii2-core/reference_badge.svg)](https://www.versioneye.com/php/yuncms:yii2-core/references)
-[![Build Status](https://img.shields.io/travis/yuncms/yii2-core.svg)](http://travis-ci.org/yuncms/yii2-core)
-[![License](https://poser.pugx.org/yuncms/yii2-core/license.svg)](https://packagist.org/packages/yuncms/yii2-core)
+[![Latest Stable Version](https://poser.pugx.org/yuncms/yuncms-core/v/stable.png)](https://packagist.org/packages/yuncms/yuncms-core)
+[![Total Downloads](https://poser.pugx.org/yuncms/yuncms-core/downloads.png)](https://packagist.org/packages/yuncms/yuncms-core)
+[![Build Status](https://img.shields.io/travis/yuncms/yuncms-core.svg)](http://travis-ci.org/yuncms/yuncms-core)
+[![License](https://poser.pugx.org/yuncms/yuncms-core/license.svg)](https://packagist.org/packages/yuncms/yuncms-core)
 
 ## Installation
 
