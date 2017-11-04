@@ -12,23 +12,13 @@ use tests\TestCase;
 use yuncms\core\helpers\PasswordHelper;
 
 /**
- * StringHelper test
+ * PasswordHelper test
  */
-class StringHelperTest extends TestCase
+class PasswordHelperTest extends TestCase
 {
-    public function setUp()
-    {
-        parent::setUp();
-    }
-
-    protected function tearDown()
-    {
-        parent::tearDown();
-    }
-
     public function testGenerate()
     {
-        $a = substr(PasswordHelper::generate(8));
+        $a = strlen(PasswordHelper::generate(8));
         $this->assertEquals(8, $a);
     }
 }
