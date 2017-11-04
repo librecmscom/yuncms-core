@@ -4,6 +4,7 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
+
 namespace tests;
 
 use yii\helpers\ArrayHelper;
@@ -37,7 +38,25 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
             'basePath' => __DIR__,
             'aliases' => [
                 '@bower' => '@vendor/bower-asset',
-                '@npm'   => '@vendor/npm-asset',
+                '@npm' => '@vendor/npm-asset',
+            ],
+            'components' => [
+                'i18n' => [
+                    [
+                        'translations' => [
+                            'core*'=>[
+                                'class' => 'yii\i18n\PhpMessageSource',
+                                //'basePath' => '@app/messages',
+                                'sourceLanguage' => 'en-US',
+                                'fileMap' => [
+                                    'class' => 'yii\\i18n\\PhpMessageSource',
+                                    'sourceLanguage' => 'en-US',
+                                    'basePath' => '@yuncms/core/messages',
+                                ],
+                            ],
+                        ]
+                    ]
+                ]
             ],
             'vendorPath' => $this->getVendorPath(),
         ], $config));
@@ -51,13 +70,31 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
             'vendorPath' => $this->getVendorPath(),
             'aliases' => [
                 '@bower' => '@vendor/bower-asset',
-                '@npm'   => '@vendor/npm-asset',
+                '@npm' => '@vendor/npm-asset',
             ],
             'components' => [
                 'request' => [
                     'cookieValidationKey' => 'wefJDF8sfdsfSDefwqdxj9oq',
-                    'scriptFile' => __DIR__ .'/index.php',
+                    'scriptFile' => __DIR__ . '/index.php',
                     'scriptUrl' => '/index.php',
+                ],
+                'components' => [
+                    'i18n' => [
+                        [
+                            'translations' => [
+                                'core*'=>[
+                                    'class' => 'yii\i18n\PhpMessageSource',
+                                    //'basePath' => '@app/messages',
+                                    'sourceLanguage' => 'en-US',
+                                    'fileMap' => [
+                                        'class' => 'yii\\i18n\\PhpMessageSource',
+                                        'sourceLanguage' => 'en-US',
+                                        'basePath' => '@yuncms/core/messages',
+                                    ],
+                                ],
+                            ]
+                        ]
+                    ]
                 ],
             ]
         ], $config));
