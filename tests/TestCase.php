@@ -8,7 +8,11 @@ namespace tests;
 
 use yii\helpers\ArrayHelper;
 
-abstract class TestCase extends \PHPUnit_Framework_TestCase
+/**
+ * Class TestCase
+ * @package tests
+ */
+abstract class TestCase extends \PHPUnit\Framework\TestCase
 {
     /**
      * Clean up after test.
