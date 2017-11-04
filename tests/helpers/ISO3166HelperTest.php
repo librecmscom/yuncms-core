@@ -37,8 +37,12 @@ class ISO3166HelperTest extends TestCase
     public function testCountry()
     {
         \Yii::$app->language = 'en-US';
-        $this->assertEquals('China',ISO3166Helper::country('CN',false));
+        $this->assertEquals('China', ISO3166Helper::country('CN', false));
+
+        $this->assertEquals('China', ISO3166Helper::country('CN'));
         \Yii::$app->language = 'zh-CN';
-        $this->assertEquals('中国',ISO3166Helper::country('CN',false));
+        $this->assertEquals('China', ISO3166Helper::country('CN', false));
+
+        $this->assertEquals('中国', ISO3166Helper::country('CN'));
     }
 }
