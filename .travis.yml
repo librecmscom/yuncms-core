@@ -20,5 +20,5 @@ before_script:
   - mysql -e 'create database yuncms_system_test;'
 
 script:
-  - phpunit --coverage-clover=coverage.clover
+  - phpunit
 
