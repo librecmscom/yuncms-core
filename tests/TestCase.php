@@ -44,7 +44,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
                 'i18n' => [
                     [
                         'translations' => [
-                            'core*'=>[
+                            'core*' => [
                                 'class' => 'yii\i18n\PhpMessageSource',
                                 //'basePath' => '@app/messages',
                                 'sourceLanguage' => 'en-US',
@@ -78,21 +78,19 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
                     'scriptFile' => __DIR__ . '/index.php',
                     'scriptUrl' => '/index.php',
                 ],
-                'components' => [
-                    'i18n' => [
-                        [
-                            'translations' => [
-                                'core*'=>[
-                                    'class' => 'yii\i18n\PhpMessageSource',
-                                    //'basePath' => '@app/messages',
+                'i18n' => [
+                    [
+                        'translations' => [
+                            'core*' => [
+                                'class' => 'yii\i18n\PhpMessageSource',
+                                //'basePath' => '@app/messages',
+                                'sourceLanguage' => 'en-US',
+                                'fileMap' => [
+                                    'class' => 'yii\\i18n\\PhpMessageSource',
                                     'sourceLanguage' => 'en-US',
-                                    'fileMap' => [
-                                        'class' => 'yii\\i18n\\PhpMessageSource',
-                                        'sourceLanguage' => 'en-US',
-                                        'basePath' => '@yuncms/core/messages',
-                                    ],
+                                    'basePath' => '@yuncms/core/messages',
                                 ],
-                            ]
+                            ],
                         ]
                     ]
                 ],
