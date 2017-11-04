@@ -30,11 +30,6 @@
       "yuncms\\core\\": ""
     }
   },
-  "autoload-dev": {
-    "psr-4": {
-      "yuncms\\tests\\core\\": "tests"
-    }
-  },
   "extra": {
     "yuncms": {
       "name": "core",

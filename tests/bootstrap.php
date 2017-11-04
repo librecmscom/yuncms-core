@@ -12,6 +12,6 @@ $_SERVER['SCRIPT_FILENAME'] = __FILE__;
 require(__DIR__ . '/../vendor/autoload.php');
 require(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
 
-Yii::setAlias('@tests', __DIR__);
+Yii::setAlias('@yuncmsunit', __DIR__);
 
 require_once(__DIR__ . '/TestCase.php');
