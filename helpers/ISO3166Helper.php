@@ -15,7 +15,7 @@ use Locale;
  * Credits: https://github.com/julien-c/iso3166/blob/master/src/Codes.php
  *
  */
-class ISO3166
+class ISO3166Helper
 {
 
     public static $countries = [
