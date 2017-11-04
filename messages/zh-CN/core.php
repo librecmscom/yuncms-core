@@ -18,5 +18,4 @@
  */
 return [
     '{attribute} Do not meet the rules.' => '{attribute}不符合规则。',
-    'The date has to be in the past.' => '必须是过去的日期。',
 ];
