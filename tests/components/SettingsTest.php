@@ -40,5 +40,8 @@ class SettingsTest extends TestCase
     {
         $this->assertTrue(\Yii::$app->settings->delete('testkey1.test'));
         $this->assertFalse(\Yii::$app->settings->has('testkey1.test'));
+
+        $this->assertTrue(\Yii::$app->settings->deleteAll());
+
     }
 }
