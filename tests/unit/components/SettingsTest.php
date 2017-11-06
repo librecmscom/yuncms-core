@@ -38,7 +38,7 @@ class SettingsTest extends \Codeception\Test\Unit
         $this->assertEquals('123456', \Yii::$app->settings->get('testkey1.test'));
         $this->assertEquals('123456', \Yii::$app->settings->get('test', 'testkey1'));
 
-        $this->assertEquals(1,\Yii::$app->settings->delete('test', 'testkey1'));
+        $this->assertTrue(\Yii::$app->settings->delete('test', 'testkey1'));
     }
 
     public function testDelete()
