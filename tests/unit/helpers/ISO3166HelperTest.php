@@ -14,11 +14,6 @@ use yuncms\core\helpers\ISO3166Helper;
  */
 class ISO3166HelperTest extends \Codeception\Test\Unit
 {
-    protected function setUp()
-    {
-        parent::setUp();
-        $this->mockApplication();
-    }
 
     public function testPhoneCode()
     {
