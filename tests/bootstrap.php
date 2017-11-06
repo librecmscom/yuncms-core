@@ -1,16 +1,11 @@
 <?php
 
-// ensure we get report on all possible php errors
-error_reporting(-1);
+defined('YII_DEBUG') or define('YII_DEBUG', true);
+defined('YII_ENV') or define('YII_ENV', 'test');
+defined('YII_APP_BASE_PATH') or define('YII_APP_BASE_PATH', __DIR__.'/../');
 
-define('YII_ENABLE_ERROR_HANDLER', false);
-define('YII_DEBUG', true);
-
-$_SERVER['SCRIPT_NAME'] = '/' . __DIR__;
-$_SERVER['SCRIPT_FILENAME'] = __FILE__;
-
-require(__DIR__ . '/../vendor/autoload.php');
-require(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
+require_once(YII_APP_BASE_PATH . '/vendor/autoload.php');
+require_once(YII_APP_BASE_PATH . '/vendor/yiisoft/yii2/Yii.php');
 
 Yii::setAlias('@tests', __DIR__);
 
