@@ -1,6 +1,6 @@
 <?php
 
-namespace yuncms\system\backend\controllers;
+namespace yuncms\core\backend\controllers;
 
 use Yii;
 use yii\web\Controller;

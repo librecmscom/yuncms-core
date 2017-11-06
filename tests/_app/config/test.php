@@ -19,6 +19,10 @@ return [
             'class' => 'yii\caching\FileCache',
             'cachePath' => '@runtime/cache',
         ],
+        'settings' => [
+            'class' => 'yuncms\core\components\Settings',
+            'frontCache' => 'cache'
+        ],
         'request' => [
             'cookieValidationKey' => 'test',
             'enableCsrfValidation' => false,
