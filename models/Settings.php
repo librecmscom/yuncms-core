@@ -12,7 +12,7 @@ use yii\base\InvalidParamException;
  *
  * @author Aris Karageorgos <aris@phe.me>
  */
-class Setting extends BaseSetting
+class Settings extends BaseSetting
 {
     /**
      * @param bool $forDropDown if false - return array or validators, true - key=>value for dropDown

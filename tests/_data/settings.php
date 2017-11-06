@@ -7,7 +7,7 @@
 return [
     'url' => [
         'type' => 'string',
-        'section' => 'system',
+        'section' => 'core',
         'key' => 'url',
         'value' => 'https://www.yuncms.net',
         'active' => 1,
