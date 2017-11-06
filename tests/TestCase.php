@@ -41,6 +41,14 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
                 '@npm' => '@vendor/npm-asset',
             ],
             'components' => [
+                'db' => [
+                    'class' => 'yii\db\Connection',
+                    'dsn' => 'mysql:host=localhost;dbname=yuncms_test',
+                    'charset' => 'utf8',
+                    'tablePrefix' => 'yun_',
+                    'username' => 'root',
+                    'password' => '',
+                ],
                 'cache' => [
                     'class' => 'yii\caching\FileCache',
                     'cachePath' => '@runtime/cache',
@@ -79,6 +87,14 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
                 '@npm' => '@vendor/npm-asset',
             ],
             'components' => [
+                'db' => [
+                    'class' => 'yii\db\Connection',
+                    'dsn' => 'mysql:host=localhost;dbname=yuncms_test',
+                    'charset' => 'utf8',
+                    'tablePrefix' => 'yun_',
+                    'username' => 'root',
+                    'password' => '',
+                ],
                 'cache' => [
                     'class' => 'yii\caching\FileCache',
                     'cachePath' => '@runtime/cache',
