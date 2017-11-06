@@ -39,7 +39,10 @@
         "sourceLanguage": "en-US",
         "basePath": "@yuncms/core/messages"
       },
-      "migrationNamespace": "yuncms\\core\\migrations"
+      "migrationNamespace": "yuncms\\core\\migrations",
+      "backend": {
+        "class": "yuncms\\core\\backend\\Module"
+      }
     },
     "bootstrap": "yuncms\\core\\Bootstrap",
     "branch-alias": {
