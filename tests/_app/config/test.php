@@ -17,14 +17,9 @@ return [
     ],
     'components' => [
         'db' => require __DIR__ . '/db.php',
-        'mailer' => [
-            'useFileTransport' => true,
-        ],
-        'authClientCollection' => [
-            'class' => 'yii\authclient\Collection'
-        ],
-        'urlManager' => [
-            'showScriptName' => true,
+        'cache' => [
+            'class' => 'yii\caching\FileCache',
+            'cachePath' => '@runtime/cache',
         ],
         'request' => [
             'cookieValidationKey' => 'test',
