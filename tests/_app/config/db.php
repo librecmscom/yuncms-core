@@ -6,6 +6,7 @@ $db = [
     'username' => 'root',
     'password' => '',
     'charset' => 'utf8',
+    'tablePrefix' => 'yun_'
 ];
 
 if (file_exists(__DIR__ . '/db.local.php')) {
