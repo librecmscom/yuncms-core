@@ -28,6 +28,10 @@ class SettingsTest extends TestCase
 
         $this->assertTrue(\Yii::$app->settings->set('testkey1.test', '123456', null, 'string'));
         $this->assertTrue(\Yii::$app->settings->has('testkey1.test'));
+
+        $this->assertTrue(\Yii::$app->settings->set('testkey1.test', '654321', null, 'string'));
+
+        $this->assertEquals('654321', \Yii::$app->settings->get('testkey1.test'));
     }
 
     public function testGet()
