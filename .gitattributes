@@ -8,3 +8,4 @@
 /tests              export-ignore
 /docs               export-ignore
 /composer.lock      export-ignore
+/codeception.yml    export-ignore
