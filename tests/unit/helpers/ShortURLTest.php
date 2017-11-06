@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
-namespace tests\helpers;
+namespace tests\unit\helpers;
 
 use yuncms\core\helpers\ShortURL;
 
@@ -13,6 +13,12 @@ use yuncms\core\helpers\ShortURL;
  */
 class ShortURLTest extends \Codeception\Test\Unit
 {
+    protected function _before()
+    {
+        new \yii\console\Application(require(\Yii::getAlias('@tests/_app/config/console.php')));
+    }
+
+
     public function testEncode()
     {
         $shortURL = ShortURL::encode('123456789');

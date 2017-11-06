@@ -5,7 +5,7 @@
  * @license http://www.tintsoft.com/license/
  */
 
-namespace tests\helpers;
+namespace tests\unit\helpers;
 
 use yuncms\core\helpers\FileHelper;
 
@@ -14,6 +14,12 @@ use yuncms\core\helpers\FileHelper;
  */
 class FileHelperTest extends \Codeception\Test\Unit
 {
+
+    protected function _before()
+    {
+        new \yii\console\Application(require(\Yii::getAlias('@tests/_app/config/console.php')));
+    }
+
 
     public function testHasExtension()
     {

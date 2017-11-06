@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
-namespace tests\validators;
+namespace tests\unit\validators;
 
 use yuncms\core\validators\IdCardValidator;
 
@@ -14,11 +14,11 @@ use yuncms\core\validators\IdCardValidator;
  */
 class IdCardValidatorTest extends \Codeception\Test\Unit
 {
-    protected function setUp()
+    protected function _before()
     {
-        parent::setUp();
-        $this->mockApplication();
+        new \yii\console\Application(require(\Yii::getAlias('@tests/_app/config/console.php')));
     }
+
 
     public function testPastDateValidator()
     {

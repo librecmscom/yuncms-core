@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
-namespace tests\validators;
+namespace tests\unit\validators;
 
 use yuncms\core\validators\MobileValidator;
 

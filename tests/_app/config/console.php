@@ -5,7 +5,6 @@ return [
     'basePath' => dirname(__DIR__),
     'aliases' => [
         '@yuncms/core' => dirname(dirname(dirname(__DIR__))),
-        '@tests' => dirname(dirname(__DIR__)),
     ],
     'controllerMap' => [
         'migrate' => [
@@ -27,7 +26,7 @@ return [
             'cachePath' => '@runtime/cache',
         ],
         'settings' => [
-            'class' => 'yuncms\system\components\Settings',
+            'class' => 'yuncms\core\components\Settings',
             'frontCache' => 'cache'
         ],
         'i18n' => [

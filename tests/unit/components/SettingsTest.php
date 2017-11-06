@@ -5,7 +5,7 @@
  * @license http://www.tintsoft.com/license/
  */
 
-namespace tests\components;
+namespace tests\unit\components;
 
 /**
  * Class SettingsTest
@@ -13,7 +13,10 @@ namespace tests\components;
  */
 class SettingsTest extends \Codeception\Test\Unit
 {
-
+    protected function _before()
+    {
+        new \yii\console\Application(require(\Yii::getAlias('@tests/_app/config/console.php')));
+    }
 
     public function testSet()
     {

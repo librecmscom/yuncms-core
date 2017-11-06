@@ -5,7 +5,7 @@
  * @license http://www.tintsoft.com/license/
  */
 
-namespace tests\helpers;
+namespace tests\unit\helpers;
 
 use yuncms\core\helpers\ISO3166Helper;
 
@@ -14,6 +14,12 @@ use yuncms\core\helpers\ISO3166Helper;
  */
 class ISO3166HelperTest extends \Codeception\Test\Unit
 {
+
+    protected function _before()
+    {
+        new \yii\console\Application(require(\Yii::getAlias('@tests/_app/config/console.php')));
+    }
+
 
     public function testPhoneCode()
     {

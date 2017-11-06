@@ -6,7 +6,6 @@ return [
     'language' => 'en-US',
     'aliases' => [
         '@yuncms/core' => dirname(dirname(dirname(__DIR__))),
-        '@tests' => dirname(dirname(__DIR__)),
         '@bower' => '@vendor/bower-asset',
     ],
     'components' => [
