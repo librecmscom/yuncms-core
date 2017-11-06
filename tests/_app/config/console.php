@@ -14,7 +14,7 @@ return [
             'interactive' => 0,
             //命名空间
             'migrationNamespaces' => [
-                'yuncms\user\migrations',
+                'yuncms\core\migrations',
             ],
             // 完全禁用非命名空间迁移
             'migrationPath' => null,

@@ -9,12 +9,6 @@ return [
         '@tests' => dirname(dirname(__DIR__)),
         '@bower' => '@vendor/bower-asset',
     ],
-    'bootstrap' => ['yuncms\user\Bootstrap'],
-    'modules' => [
-        'user' => [
-            'class' => 'yuncms\user\frontend\Module',
-        ],
-    ],
     'components' => [
         'db' => require __DIR__ . '/db.php',
         'cache' => [
