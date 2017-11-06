@@ -1,4 +1,5 @@
 <?php
+
 namespace yuncms\core\models;
 
 use Yii;
@@ -165,7 +166,7 @@ class BaseSetting extends ActiveRecord implements SettingInterface
         $model = static::findOne(['section' => $section, 'key' => $key]);
 
         if ($model) {
-            return $model->delete();
+            return $model->delete() >= 0 ? true : false;
         }
         return true;
     }
@@ -175,13 +176,14 @@ class BaseSetting extends ActiveRecord implements SettingInterface
      */
     public function deleteAllSettings()
     {
-        return static::deleteAll();
+        return static::deleteAll() >= 0 ? true : false;
     }
 
     /**
      * @inheritdoc
      */
-    public function findSetting($key, $section = null) {
+    public function findSetting($key, $section = null)
+    {
         if (is_null($section)) {
             $pieces = explode('.', $key, 2);
             if (count($pieces) > 1) {
