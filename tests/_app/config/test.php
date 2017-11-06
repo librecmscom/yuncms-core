@@ -1,12 +1,17 @@
 <?php
 
 return [
-    'id' => 'yii2-user-tests',
+    'id' => 'yii2-tests',
     'basePath' => dirname(__DIR__),
     'language' => 'en-US',
     'aliases' => [
         '@yuncms/core' => dirname(dirname(dirname(__DIR__))),
         '@bower' => '@vendor/bower-asset',
+    ],
+    'modules' => [
+        'core' => [
+            'class' => 'yuncms\core\backend\Module'
+        ]
     ],
     'components' => [
         'db' => require __DIR__ . '/db.php',
