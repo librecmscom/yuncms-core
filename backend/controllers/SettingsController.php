@@ -39,7 +39,7 @@ class SettingsController extends Controller
 //        return [
 //            'toggle' => [
 //                'class' => ToggleAction::className(),
-//                'modelClass' => 'yuncms\system\models\Setting',
+//                'modelClass' => 'yuncms\core\models\Settings',
 //                //'setFlash' => true,
 //            ]
 //        ];
