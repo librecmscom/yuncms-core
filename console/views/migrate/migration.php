@@ -25,14 +25,15 @@ class <?= $className ?> extends Migration
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
         }
         $this->createTable('{{%test}}', [
-            'id' => $this->primaryKey(),
-            //'user_id' => $this->integer()->comment('用户ID'),
-            'status' => $this->smallInteger(1)->defaultValue(0)->comment('状态'),
-            'published_at' => $this->integer(10)->unsigned()->comment('发布时间'),
-            'created_at' => $this->integer(10)->unsigned()->notNull()->comment('创建时间'),
-            'updated_at' => $this->integer(10)->unsigned()->notNull()->comment('更新时间'),
+            'id' => $this->primaryKey()->unsigned()->comment('ID'),
+            //'user_id' => $this->integer()->unsigned()->comment('User ID'),
+            'status' => $this->smallInteger(1)->defaultValue(0)->comment('Status'),
+            'published_at' => $this->integer(10)->unsigned()->comment('Published At'),
+            'created_at' => $this->integer(10)->unsigned()->notNull()->comment('Created At'),
+            'updated_at' => $this->integer(10)->unsigned()->notNull()->comment('Updated At'),
         ], $tableOptions);
 
+        $this->addForeignKey('{{%test_fk}}', '{{%test}}', 'user_id', '{{%user}}', 'id', 'CASCADE', 'CASCADE');
     }
 
     public function safeDown()
