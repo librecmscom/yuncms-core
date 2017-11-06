@@ -6,16 +6,11 @@
  */
 namespace tests\validators;
 
-use tests\TestCase;
 use yuncms\core\validators\MobileValidator;
 
-class MobileValidatorTest extends TestCase
+class MobileValidatorTest extends \Codeception\Test\Unit
 {
-    protected function setUp()
-    {
-        parent::setUp();
-        $this->mockApplication();
-    }
+
 
     public function testValidateValue()
     {

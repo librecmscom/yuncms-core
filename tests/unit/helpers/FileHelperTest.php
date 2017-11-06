@@ -7,14 +7,12 @@
 
 namespace tests\helpers;
 
-use Yii;
-use tests\TestCase;
 use yuncms\core\helpers\FileHelper;
 
 /**
  * FileHelperTest
  */
-class FileHelperTest extends TestCase
+class FileHelperTest extends \Codeception\Test\Unit
 {
 
     public function testHasExtension()

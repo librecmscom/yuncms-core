@@ -7,14 +7,12 @@
 
 namespace tests\helpers;
 
-use Yii;
-use tests\TestCase;
 use yuncms\core\helpers\PasswordHelper;
 
 /**
  * PasswordHelper test
  */
-class PasswordHelperTest extends TestCase
+class PasswordHelperTest extends \Codeception\Test\Unit
 {
     public function testGenerate()
     {

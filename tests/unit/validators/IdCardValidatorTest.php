@@ -6,14 +6,13 @@
  */
 namespace tests\validators;
 
-use tests\TestCase;
 use yuncms\core\validators\IdCardValidator;
 
 /**
  * Class IdCardValidatorTest
  * @package tests\validators
  */
-class IdCardValidatorTest extends TestCase
+class IdCardValidatorTest extends \Codeception\Test\Unit
 {
     protected function setUp()
     {

@@ -6,14 +6,12 @@
  */
 namespace tests\helpers;
 
-use Yii;
-use tests\TestCase;
 use yuncms\core\helpers\ShortURL;
 
 /**
  * ShortURL test
  */
-class ShortURLTest extends TestCase
+class ShortURLTest extends \Codeception\Test\Unit
 {
     public function testEncode()
     {

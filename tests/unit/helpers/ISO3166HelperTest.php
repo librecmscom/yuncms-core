@@ -7,14 +7,12 @@
 
 namespace tests\helpers;
 
-use Yii;
-use tests\TestCase;
 use yuncms\core\helpers\ISO3166Helper;
 
 /**
  * ISO3166HelperTest
  */
-class ISO3166HelperTest extends TestCase
+class ISO3166HelperTest extends \Codeception\Test\Unit
 {
     protected function setUp()
     {

@@ -7,19 +7,13 @@
 
 namespace tests\components;
 
-use tests\TestCase;
-
 /**
  * Class SettingsTest
  * @package tests\components
  */
-class SettingsTest extends TestCase
+class SettingsTest extends \Codeception\Test\Unit
 {
-    protected function setUp()
-    {
-        parent::setUp();
-        $this->mockApplication();
-    }
+
 
     public function testSet()
     {

@@ -4,18 +4,14 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
+
 namespace tests\validators;
 
-use tests\TestCase;
 use yuncms\core\validators\QqValidator;
 
-class QqValidatorTest extends TestCase
+class QqValidatorTest extends \Codeception\Test\Unit
 {
-    protected function setUp()
-    {
-        parent::setUp();
-        $this->mockApplication();
-    }
+
 
     public function testValidateValue()
     {

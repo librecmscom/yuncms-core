@@ -23,7 +23,8 @@ install:
 before_script:
   - mysql -e 'create database yuncms_test;'
   - php tests/_app/yii.php migrate --interactive=0
+  - vendor/bin/codecept build
 
 script:
-  - vendor/bin/phpunit --verbose
+  - vendor/bin/codecept run
 
