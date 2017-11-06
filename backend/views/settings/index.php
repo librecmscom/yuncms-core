@@ -7,7 +7,7 @@ use yii\helpers\ArrayHelper;
 use xutl\inspinia\Box;
 use xutl\inspinia\Toolbar;
 use xutl\inspinia\Alert;
-use yuncms\core\models\Setting;
+use yuncms\core\models\Settings;
 
 /**
  * @var yii\web\View $this
@@ -57,7 +57,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         [
                             'attribute' => 'section',
                             'filter' => ArrayHelper::map(
-                                Setting::find()->select('section')->distinct()->where(['<>', 'section', ''])->all(),
+                                Settings::find()->select('section')->distinct()->where(['<>', 'section', ''])->all(),
                                 'section',
                                 'section'
                             ),

@@ -6,6 +6,8 @@ return [
     'language' => 'en-US',
     'aliases' => [
         '@yuncms/core' => dirname(dirname(dirname(__DIR__))),
+        '@tests' => '@yuncms/core/tests',
+        '@vendor' => '@yuncms/core/vendor',
         '@bower' => '@vendor/bower-asset',
     ],
     'modules' => [
@@ -26,6 +28,12 @@ return [
         'request' => [
             'cookieValidationKey' => 'test',
             'enableCsrfValidation' => false,
+        ],
+        'urlManager' => [
+            'showScriptName' => true,
+        ],
+        'user'=>[
+            'identityClass' => ''
         ],
         'i18n' => [
             'translations' => [
