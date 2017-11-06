@@ -41,6 +41,10 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
                 '@npm' => '@vendor/npm-asset',
             ],
             'components' => [
+                'cache' => [
+                    'class' => 'yii\caching\FileCache',
+                    'cachePath' => '@runtime/cache',
+                ],
                 'i18n' => [
                     'translations' => [
                         'core*' => [
@@ -54,7 +58,11 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
                             ],
                         ],
                     ]
-                ]
+                ],
+                'settings' => [
+                    'class' => 'yuncms\core\components\Settings',
+                    'frontCache' => 'cache'
+                ],
             ],
             'vendorPath' => $this->getVendorPath(),
         ], $config));
@@ -71,6 +79,10 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
                 '@npm' => '@vendor/npm-asset',
             ],
             'components' => [
+                'cache' => [
+                    'class' => 'yii\caching\FileCache',
+                    'cachePath' => '@runtime/cache',
+                ],
                 'request' => [
                     'cookieValidationKey' => 'wefJDF8sfdsfSDefwqdxj9oq',
                     'scriptFile' => __DIR__ . '/index.php',
@@ -89,6 +101,10 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
                             ],
                         ],
                     ]
+                ],
+                'settings' => [
+                    'class' => 'yuncms\core\components\Settings',
+                    'frontCache' => 'cache'
                 ],
             ]
         ], $config));
