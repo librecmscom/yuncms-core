@@ -51,4 +51,18 @@ class SettingsTest extends \Codeception\Test\Unit
         $this->assertTrue(\Yii::$app->settings->deleteAll());
 
     }
+
+    public function testActivate()
+    {
+        $this->assertTrue(\Yii::$app->settings->set('test1', '123456', 'testkey', 'string'));
+
+        $this->assertTrue(\Yii::$app->settings->deactivate('test1', 'testkey'));
+
+        $this->assertFalse(\Yii::$app->settings->has('test1', 'testkey'));
+
+        $this->assertTrue(\Yii::$app->settings->activate('test1', 'testkey'));
+
+        $this->assertTrue(\Yii::$app->settings->has('test1', 'testkey'));
+
+    }
 }
