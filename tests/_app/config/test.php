@@ -5,7 +5,7 @@ return [
     'basePath' => dirname(__DIR__),
     'language' => 'en-US',
     'aliases' => [
-        '@yuncms/user' => dirname(dirname(dirname(__DIR__))),
+        '@yuncms/core' => dirname(dirname(dirname(__DIR__))),
         '@tests' => dirname(dirname(__DIR__)),
         '@bower' => '@vendor/bower-asset',
     ],
