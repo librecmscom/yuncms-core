@@ -26,5 +26,6 @@ before_script:
   - vendor/bin/codecept build
 
 script:
+  - mkdir assets
   - vendor/bin/codecept run
 

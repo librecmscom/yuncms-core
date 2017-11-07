@@ -21,6 +21,6 @@ class SettingsCest
 
     public function openSettingsPage(\FunctionalTester $I)
     {
-        $I->see('Manage Settings', 'row');
+        $I->see('Manage Settings');
     }
 }
