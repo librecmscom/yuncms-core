@@ -5,6 +5,7 @@ return [
     'basePath' => dirname(__DIR__),
     'aliases' => [
         '@yuncms/core' => dirname(dirname(dirname(__DIR__))),
+        '@tests'=>dirname(dirname(dirname(__DIR__))).'/tests',
     ],
     'controllerMap' => [
         'migrate' => [
