@@ -4,6 +4,10 @@ namespace yuncms\core\migrations;
 
 use yii\db\Migration;
 
+/**
+ * Class M171104092823Create_cache_table
+ * @package yuncms\core\migrations
+ */
 class M171104092823Create_cache_table extends Migration
 {
 
