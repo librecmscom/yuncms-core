@@ -22,7 +22,7 @@ class MobileValidator extends Validator
     /**
      * @var string the regular expression for matching mobile.
      */
-    public $mobilePattern = '/^13[\d]{9}$|^14[\d]{9}$|^15[\d]{9}$|^17[\d]{9}$|^18[\d]{9}$/';
+    public $mobilePattern = '/^1[34578]{1}[\d]{9}$/';
 
     /**
      * @inheritdoc
