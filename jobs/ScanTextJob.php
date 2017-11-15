@@ -9,7 +9,7 @@ namespace yuncms\core\jobs;
 use Yii;
 use yii\base\BaseObject;
 use yii\queue\RetryableJobInterface;
-use yuncms\system\ScanInterface;
+use yuncms\core\ScanInterface;
 
 /**
  * Class GreenJob.
