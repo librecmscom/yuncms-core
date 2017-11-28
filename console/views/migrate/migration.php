@@ -33,7 +33,7 @@ class <?= $className ?> extends Migration
             'updated_at' => $this->integer(10)->unsigned()->notNull()->comment('Updated At'),
         ], $tableOptions);
 
-        $this->addForeignKey('{{%test_fk}}', '{{%test}}', 'user_id', '{{%user}}', 'id', 'CASCADE', 'CASCADE');
+        //$this->addForeignKey('{{%test_fk}}', '{{%test}}', 'user_id', '{{%user}}', 'id', 'CASCADE', 'CASCADE');
     }
 
     public function safeDown()
