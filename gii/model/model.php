@@ -36,8 +36,8 @@ use yii\behaviors\BlameableBehavior;
 <?php if(isset($labels['slug']) || isset($labels['uuid'])): ?>
 use yii\behaviors\AttributeBehavior;
 <?php endif; ?>
-use yuncms\system\helpers\DateHelper;
-use yuncms\system\ScanInterface;
+use yuncms\core\helpers\DateHelper;
+use yuncms\core\ScanInterface;
 
 /**
  * This is the model class for table "<?= $generator->generateTableName($tableName) ?>".
@@ -52,7 +52,7 @@ use yuncms\system\ScanInterface;
 <?php endforeach; ?>
 <?php endif; ?>
  *
- * @property-read bool isAuthor 是否是作者
+ * @property-read bool $isAuthor 是否是作者
  * @property-read boolean $isDraft 是否草稿
  * @property-read boolean $isPublished 是否发布
  */

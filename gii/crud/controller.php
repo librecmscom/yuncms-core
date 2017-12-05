@@ -93,6 +93,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
      * Displays a single <?= $modelClass ?> model.
      * <?= implode("\n     * ", $actionParamComments) . "\n" ?>
      * @return mixed
+     * @throws NotFoundHttpException
      */
     public function actionView(<?= $actionParams ?>)
     {
@@ -114,7 +115,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
             return ActiveForm::validate($model);
         }
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            Yii::$app->getSession()->setFlash('success', Yii::t('app','Create success.'));
+            Yii::$app->getSession()->setFlash('success', <?= $generator->generateString('Create success.');?>);
             return $this->redirect(['view', <?= $urlParams ?>]);
         } else {
             return $this->render('create', [
@@ -137,7 +138,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
             return ActiveForm::validate($model);
         }
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            Yii::$app->getSession()->setFlash('success', Yii::t('app','Update success.'));
+            Yii::$app->getSession()->setFlash('success', <?= $generator->generateString('Update success.');?>);
             return $this->redirect(['view', <?= $urlParams ?>]);
         } else {
             return $this->render('update', [
@@ -155,7 +156,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
     public function actionDelete(<?= $actionParams ?>)
     {
         $this->findModel(<?= $actionParams ?>)->delete();
-        Yii::$app->getSession()->setFlash('success', Yii::t('app','Delete success.'));
+        Yii::$app->getSession()->setFlash('success', <?= $generator->generateString('Delete success.');?>);
         return $this->redirect(['index']);
     }
      /**
@@ -170,9 +171,9 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
                 $model = $this->findModel($id);
                 $model->delete();
             }
-            Yii::$app->getSession()->setFlash('success', Yii::t('app', 'Delete success.'));
+            Yii::$app->getSession()->setFlash('success', <?= $generator->generateString('Delete success.');?>);
         } else {
-            Yii::$app->getSession()->setFlash('success', Yii::t('app', 'Delete failed.'));
+            Yii::$app->getSession()->setFlash('success', <?= $generator->generateString('Delete failed.');?>);
         }
         return $this->redirect(['index']);
     }

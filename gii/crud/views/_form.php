@@ -33,7 +33,7 @@ echo "    <div class=\"hr-line-dashed\"></div>\n\n";
 
 <div class="form-group">
     <div class="col-sm-4 col-sm-offset-2">
-        <?= "<?= " ?>Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= "<?= " ?>Html::submitButton($model->isNewRecord ? <?= $generator->generateString('Create');?> : <?= $generator->generateString('Update');?>, ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 </div>
 
