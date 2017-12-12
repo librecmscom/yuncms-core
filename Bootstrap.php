@@ -34,6 +34,17 @@ class Bootstrap implements BootstrapInterface
 //                'templateFile' => '@yuncms/core/console/views/migration.php',
 //                //'migrationNamespaces' => $migrationNamespaces,
 //            ];
+            //全局任务程序注册
+            if (is_file(__DIR__ . '../tasks.php')) {
+                $tasks = require(__DIR__ . '../tasks.php');
+                foreach ($tasks as $task) {
+                    if (isset($task['class'])) {
+                        Event::on($task['class'], $task['event'], $task['callback']);
+                    } else {
+                        Event::on($task[0], $task[1], $task[2]);
+                    }
+                }
+            }
         }
 //        else if($app instanceof WebApplication){
 //            //自动检测语言
@@ -55,6 +66,20 @@ class Bootstrap implements BootstrapInterface
                     Event::on($event['class'], $event['event'], $event['callback']);
                 } else {
                     Event::on($event[0], $event[1], $event[2]);
+                }
+            }
+        }
+    }
+
+    /**
+     * @param array $packages
+     */
+    protected function discoverPackages(array $packages)
+    {
+        foreach ($packages as $package) {
+            foreach ($package['observers'] ?? [] as $handler) {
+                if (class_exists($handler) && in_array(EventHandlerInterface::class, class_implements($handler), true)) {
+                    $this->push($handler);
                 }
             }
         }

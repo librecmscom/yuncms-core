@@ -21,7 +21,7 @@
     "yiisoft/yii2-httpclient": "~2.0",
     "yiisoft/yii2-redis": "~2.0",
     "xutl/yii2-inspinia-widget": "~1.0",
-    "yuncms/yuncms-composer": "~2.0.0"
+    "yuncms/yuncms-composer": "^2.0.1"
   },
   "require-dev": {
     "codeception/base": "^2.2.3",
@@ -34,8 +34,8 @@
   },
   "extra": {
     "yuncms": {
-      "name": "core",
-      "i18n": {
+      "id": "core",
+      "translate": {
         "class": "yii\\i18n\\PhpMessageSource",
         "sourceLanguage": "en-US",
         "basePath": "@yuncms/core/messages"
@@ -54,10 +54,6 @@
     {
       "type": "composer",
       "url": "https://asset-packagist.org"
-    },
-    {
-      "type": "composer",
-      "url": "https://packagist.phpcomposer.com"
     }
   ]
 }
