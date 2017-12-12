@@ -136,6 +136,7 @@ class Settings extends Component
      * @param null|string $section
      * @param null|string $type
      * @return boolean
+     * @throws \yii\base\InvalidConfigException
      */
     public function set($key, $value, $section = null, $type = null)
     {
@@ -154,12 +155,13 @@ class Settings extends Component
     /**
      * Returns the specified key or sets the key with the supplied (default) value
      *
-     * @param string$key
+     * @param string $key
      * @param mixed $value
      * @param null|string $section
      * @param null|string $type
      *
      * @return bool|mixed
+     * @throws \yii\base\InvalidConfigException
      */
     public function getOrSet($key, $value, $section = null, $type = null)
     {

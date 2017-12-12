@@ -133,6 +133,7 @@ class ListGroup extends Widget
 
     /**
      * Renders the widget.
+     * @throws InvalidConfigException
      */
     public function run()
     {
@@ -143,6 +144,7 @@ class ListGroup extends Widget
 
     /**
      * Renders widget items.
+     * @throws InvalidConfigException
      */
     public function renderItems()
     {

@@ -432,7 +432,7 @@ class DateHelper
 
     /**
      * 获取上周结束时间戳
-     * @return
+     * @return false|int
      */
     public static function lastWeekLastSecond()
     {

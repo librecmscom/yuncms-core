@@ -20,6 +20,7 @@ class PasswordHelper
      * @param string $password
      * @param int $cost
      * @return string
+     * @throws \yii\base\Exception
      */
     public static function hash($password, $cost = 10)
     {

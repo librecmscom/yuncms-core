@@ -76,6 +76,11 @@ class Settings extends BaseSetting
         ];
     }
 
+    /**
+     * @param $insert
+     * @return bool
+     * @throws \yii\base\InvalidConfigException
+     */
     public function beforeSave($insert)
     {
         $validators = $this->getTypes(false);

@@ -2,7 +2,6 @@
 
 namespace yuncms\core\backend\models;
 
-use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use yuncms\core\models\Settings;

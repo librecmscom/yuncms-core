@@ -173,6 +173,8 @@ class FileHelper extends \yii\helpers\FileHelper
      *
      * @param  string $directory
      * @return bool
+     * @throws \yii\base\ErrorException
+     * @throws \yii\base\Exception
      */
     public static function cleanDirectory($directory)
     {

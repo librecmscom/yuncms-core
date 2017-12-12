@@ -7,9 +7,12 @@
 
 namespace yuncms\core;
 
+use Yii;
 use yii\base\Event;
 use yii\base\BootstrapInterface;
+use yii\web\Application as WebApplication;
 use yii\console\Application as ConsoleApplication;
+use yii\web\Cookie;
 
 /**
  * Class Bootstrap
@@ -32,6 +35,17 @@ class Bootstrap implements BootstrapInterface
 //                //'migrationNamespaces' => $migrationNamespaces,
 //            ];
         }
+//        else if($app instanceof WebApplication){
+//            //自动检测语言
+//            if (($language = Yii::$app->request->getQueryParam('language')) !== null) {
+//                $app->language = $language;
+//                Yii::$app->response->cookies->add(new Cookie(['name' => 'language', 'value' => $language]));
+//            } else if (($cookie = Yii::$app->request->cookies->get('language')) !== null) {
+//                $app->language = $cookie->value;
+//            } else if (($language = Yii::$app->request->getPreferredLanguage()) !== null) {
+//                $app->language = $language;
+//            }
+//        }
 
         //全局事件处理程序注册
         if (is_file(__DIR__ . '../events.php')) {
