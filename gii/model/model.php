@@ -52,17 +52,19 @@ use yuncms\core\ScanInterface;
 <?php endforeach; ?>
 <?php endif; ?>
  *
- * @property-read bool $isAuthor 是否是作者
+ * @property-read boolean $isAuthor 是否是作者
+<?php if(isset($labels['status'])): ?>
  * @property-read boolean $isDraft 是否草稿
  * @property-read boolean $isPublished 是否发布
+<?php endif; ?>
  */
-class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') ?> implements ScanInterface
+class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') ?><?php if(isset($labels['status'])): ?> implements ScanInterface<?php endif; ?>
 {
 
     //场景定义
     const SCENARIO_CREATE = 'create';//创建
     const SCENARIO_UPDATE = 'update';//更新
-
+<?php if(isset($labels['status'])): ?>
     //状态定义
     const STATUS_DRAFT = 0b0;//草稿
     const STATUS_REVIEW = 0b1;//待审核
@@ -74,7 +76,7 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') ?>
     const AFTER_PUBLISHED = 'afterPublished';
     const BEFORE_REJECTED = 'beforeRejected';
     const AFTER_REJECTED = 'afterRejected';
-
+<?php endif; ?>
 
     /**
      * @inheritdoc
@@ -164,9 +166,9 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') ?>
      */
     public function rules()
     {
-        return [<?= "\n            " . implode(",\n            ", $rules) . ",\n        " ?>    // status rule
+        return [<?= "\n            " . implode(",\n            ", $rules) . ",\n        " ?>    <?php if(isset($labels['status'])): ?>// status rule
             ['status', 'default', 'value' => self::STATUS_REVIEW],
-            ['status', 'in', 'range' => [self::STATUS_DRAFT, self::STATUS_REVIEW, self::STATUS_REJECTED, self::STATUS_PUBLISHED]],
+            ['status', 'in', 'range' => [self::STATUS_DRAFT, self::STATUS_REVIEW, self::STATUS_REJECTED, self::STATUS_PUBLISHED]],<?php endif; ?>
         ];
     }
 
@@ -213,7 +215,7 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') ?>
     {
         return $this->user_id == Yii::$app->user->id;
     }
-
+<?php if(isset($labels['status'])): ?>
     /**
      * 是否草稿状态
      * @return bool
@@ -302,7 +304,7 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') ?>
             self::STATUS_PUBLISHED => Yii::t('<?=$generator->messageCategory?>', 'Published'),
         ];
     }
-
+<?php endif; ?>
 //    public function afterFind()
 //    {
 //        parent::afterFind();

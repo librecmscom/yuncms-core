@@ -44,6 +44,7 @@ class CronController extends Controller
 
     /**
      * Executes minute cron tasks.
+     * @throws \yii\base\InvalidConfigException
      */
     public function actionMinute()
     {
@@ -55,6 +56,7 @@ class CronController extends Controller
 
     /**
      * Executes hourly cron tasks.
+     * @throws \yii\base\InvalidConfigException
      */
     public function actionHourly()
     {
@@ -66,6 +68,7 @@ class CronController extends Controller
 
     /**
      * Executes daily cron tasks.
+     * @throws \yii\base\InvalidConfigException
      */
     public function actionDaily()
     {
@@ -77,6 +80,7 @@ class CronController extends Controller
 
     /**
      * Executes month cron tasks.
+     * @throws \yii\base\InvalidConfigException
      */
     public function actionMonth()
     {

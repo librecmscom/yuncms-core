@@ -58,7 +58,6 @@ class Settings extends Component
     /**
      * Initialize the component
      *
-     * @throws \yii\base\InvalidConfigException
      */
     public function init()
     {

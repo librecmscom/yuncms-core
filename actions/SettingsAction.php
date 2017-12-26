@@ -31,6 +31,7 @@ class SettingsAction extends Action
 
     /**
      * Render the settings form.
+     * @throws \yii\base\InvalidConfigException
      */
     public function run()
     {
