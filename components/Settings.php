@@ -57,7 +57,6 @@ class Settings extends Component
 
     /**
      * Initialize the component
-     *
      */
     public function init()
     {

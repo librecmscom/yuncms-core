@@ -61,7 +61,6 @@ class ScanTextJob extends BaseObject implements RetryableJobInterface
      * 文本反垃圾
      * @param array $tasks
      * @return string 建议用户处理，取值范围：[“pass”, “review”, “block”], pass:文本正常，review：需要人工审核，block：文本违规，可以直接删除或者做限制处理
-     * @throws \yii\httpclient\Exception
      */
     protected function green($tasks)
     {
