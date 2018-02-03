@@ -44,7 +44,6 @@ class ScanTextJob extends BaseObject implements RetryableJobInterface
     public function execute($queue)
     {
         if ($this->modelClass instanceof ScanInterface) {
-            /** @var \yii\db\ActiveRecord $modelClass */
             $modelClass = $this->modelClass;
             if (($content = $modelClass::findReview($this->modelId)) != null) {
                 $suggestion = $this->green([
